@@ -3,9 +3,9 @@ using TheFipster.ActivityAggregator.Domain.Enums;
 using TheFipster.ActivityAggregator.Web.Models;
 using TheFipster.ActivityAggregator.Web.Services;
 
-namespace TheFipster.ActivityAggregator.Web.Components.Pages.Import.Tabs;
+namespace TheFipster.ActivityAggregator.Web.Components.Pages.Info.Tabs;
 
-public partial class InfoTab : ComponentBase
+public partial class ImporterTab : ComponentBase
 {
     private Dictionary<DataSources, int>? _classifiers;
     private Dictionary<DataSources, int>? _extractors;
@@ -39,7 +39,5 @@ public partial class InfoTab : ComponentBase
         }
 
         _capabilities = _capabilities.OrderBy(x => x.Source.ToString()).ToList();
-
-        await base.OnParametersSetAsync();
     }
 }
